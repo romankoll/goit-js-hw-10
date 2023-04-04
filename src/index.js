@@ -27,11 +27,12 @@ function handleSearch(e) {
 }
 
 function searchListCountries(data) {
-  if (data.lenght > 10) {
+  console.log(data);
+  if (data.length > 10) {
     return Notify.info(
       'Too many matches found. Please enter a more specific name.'
     );
-  } else if (data.lenght >= 2 && data.lenght <= 10) {
+  } else if (data.length >= 2 && data.length <= 10) {
     countryListEl.innerHTML = createList(data);
     countryInfoEl.innerHTML = '';
   } else {
